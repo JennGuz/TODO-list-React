@@ -1,12 +1,88 @@
 
-/* 
 
-    You can write your own styles here...
+.todoList {
+    display: flex;
+    justify-content: center;
+    /* background: yellow; */
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+    & .container {
+        background: rgb(224, 125, 249);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 600px;
+        
+        & h1 {
+            font-family: "Wire One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 100px;
+            color: white;
+        }
 
-*/
+        & input {
+            padding: 10px;
+            font-size: 20px;
+            border: 5px solid rgb(176, 10, 213);
+            border-radius: 10px;
+            background: rgb(235, 193, 246);
+            outline: none;
+        }
+
+        & .tasks {
+            font-size: 17px;
+            width: 250px;
+            margin-top: 20px;
+
+            & p {
+                margin-top: 50px;
+                font-size: 15px;
+                color: rgb(119, 113, 113);
+            }
+        }
+    }
+
+}
+
+
+.containerCheck {
+    display: flex;
+    align-items: center;
+
+    & .styleCompleted {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid rgb(133, 3, 162);
+        margin-right: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    &:hover>span>svg {
+        display: block;
+        margin-left: 20px;
+    }
+
+    & span>svg {
+        display: none;
+    }
+
+    & .iconDelete {
+        cursor: pointer;
+    }
+    
+}
+
+.check {
+    background: rgb(47, 175, 47);
+}
+
+.unCheck {
+    background: transparent;
+}
+
+.textCompleted {
+    color: grey;
+}
